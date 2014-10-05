@@ -54,7 +54,6 @@
       <section id="left-sidebar">
         
         <div class="logo">
-          <a href="#intro" class="link-scroll"><img src="assets/images/other_images/logo.png" alt="Twilli Air"></a>
         </div><!-- .logo -->
 
         <!-- Menu Icon for smaller viewports -->
@@ -63,20 +62,20 @@
         <ul id="main-menu">
           <li id="menu-item-text" class="menu-item scroll"><a href="#welcome">Välkommen</a></li>
           <li id="menu-item-grid" class="menu-item scroll"><a href="#contact">kontakt</a></li>
-          <li id="menu-item-featured" class="menu-item scroll"><a href="#featured">Featured</a></li>
-          <li id="menu-item-contact" class="menu-item scroll"><a href="#osa">OSA</a></li>
-        </ul><!-- #main-menu -->
+					<li id="menu-item-featured" class="menu-item scroll"><a href="#plats">Plats</a></li>
+					<li id="menu-item-contact" class="menu-item scroll"><a href="#osa">OSA</a></li>
+				</ul><!-- #main-menu -->
 
-      </section><!-- #left-sidebar -->
-      <!-- end: Left Sidebar -->
+				</section><!-- #left-sidebar -->
+				<!-- end: Left Sidebar -->
 
-      <section id="main-content" class="clearfix">
-        
-        <article id="intro" class="section-wrapper clearfix" data-custom-background-img="img/vi.jpg">
-          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
-            <div class="col-sm-10 col-md-9 pull-right">
+				<section id="main-content" class="clearfix">
 
-							<section class="feature-text">
+				<article id="intro" class="section-wrapper clearfix" data-custom-background-img="img/vi.jpg">
+				<div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+					<div class="col-sm-10 col-md-9 pull-right">
+
+						<section class="feature-text">
                   <p>17 januari 2015</p>
                   <h1>Sofie &amp; Henrik</h1>
 							</section>
@@ -97,18 +96,6 @@
                   <!-- grid item -->
                   <div class="grid-item col-md-6">
                     <div class="item-content clearfix">
-                      <span class="icon glyphicon glyphicon-thumbs-up"></span>
-                      <div class="text-content">
-                        <h5>Klädsel</h5>
-												<p>Mörk kostym.</p>
-												<p>Då det kan vara kyligt rekommenderar vi att damer har med sig något att ha över axlarna</p>
-                      </div>
-                    </div><!-- end: .item-content -->
-                  </div><!-- end: .grid-item -->
-
-                  <!-- grid item -->
-                  <div class="grid-item col-md-6">
-                    <div class="item-content clearfix">
                       <span class="icon glyphicon glyphicon-envelope"></span>
                       <div class="text-content">
 												<h5>OSA 20/10</h5>
@@ -122,10 +109,33 @@
                   <!-- grid item -->
                   <div class="grid-item col-md-6">
                     <div class="item-content clearfix">
+                      <span class="icon glyphicon glyphicon-thumbs-up"></span>
+                      <div class="text-content">
+                        <h5>Klädsel</h5>
+												<p>Mörk kostym.</p>
+												<p>Då det kan vara kyligt rekommenderar vi att damer har med sig något att ha över axlarna</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+									</div><!-- end: .grid-item -->
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
                       <span class="icon glyphicon glyphicon-heart-empty"></span>
                       <div class="text-content">
                         <h5>Presenter</h5>
                         <p>Som present önskar vi oss ett bidrag till vår bröllopsresa.</p>
+                      </div>
+                    </div><!-- end: .item-content -->
+                  </div><!-- end: .grid-item -->
+
+                  <!-- grid item -->
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+                      <span class="icon glyphicon glyphicon-glass"></span>
+                      <div class="text-content">
+                        <h5>Tal &amp; spex</h5>
+												<p>För att anmäla tal &amp; spex, kontakta vår <a href="#contact">toastmaster</a>.</p>
                       </div>
                     </div><!-- end: .item-content -->
                   </div><!-- end: .grid-item -->
@@ -176,105 +186,54 @@
           </div><!-- .content-wrapper -->
         </article><!-- .section-wrapper -->
 
-        <article id="featured" class="section-wrapper clearfix" data-custom-background-img="img/vi.jpg">
+        <article id="plats" class="section-wrapper clearfix" data-custom-background-img="img/naas.jpg">
           <div class="content-wrapper clearfix">
             <div class="col-sm-11 pull-right">
 
-                <h1 class="section-title">Featured</h1>
+                <h1 class="section-title">Hitta till Nääs</h1>
               
                 <!-- feature columns -->
                 <section class="feature-columns row clearfix">
-
-                  <!-- feature 1 -->
-                  <article class="feature-col col-md-4">
-                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-6');" class="thumbnail linked">
-                      <div class="image-container">
-                        <img data-img-src="assets/images/other_images/project-3.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
-                      </div>
-                      <div class="caption">
-                        <h5>Image Carousel</h5>
-                        <p>This feature contains an image carousel when you open popup.</p>
-                      </div><!-- .caption -->
-                    </a><!-- .thumbnail -->
-
-                    <div class="content-to-populate-in-modal" id="modal-content-6">
-                      <h1>Sed scelerisque</h1>
-                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat.<br/></p>
-
-                      <!-- image slider inside popup -->
-                      <div id="unique-id-for-image-slider" class="owl-carousel popup-image-gallery">
-                        <!-- slide -->
-                        <div>
-                          <!-- caption is optional. To remove it, remove the <h6> below -->
-                          <h6 class="caption">Caption for Image 1</h6>
-                          <img class="lazyOwl" data-src="assets/images/other_images/bg1.jpg">
-                        </div>
-                        <!-- slide -->
-                        <div>
-                          <h6 class="caption">Caption for Image 2</h6>
-                          <img class="lazyOwl" data-src="assets/images/other_images/bg2.jpg">
-                        </div>
-                        <!-- slide -->
-                        <div>
-                          <h6 class="caption">Caption for Image 3</h6>
-                          <img class="lazyOwl" data-src="assets/images/other_images/bg3.jpg">
-                        </div>
-                      </div>
-                    </div><!-- #modal-content-6 -->
-                  </article>
-
-                  <!-- feature 2 -->
-                  <article class="feature-col col-md-4">
+                  <article class="feature-col col-md-6">
                     <a href="" onclick="populate_and_open_modal(event, 'modal-content-7');" class="thumbnail linked">
                       <div class="image-container">
-                        <img data-img-src="assets/images/other_images/project-2.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
+                        <img src="img/hittamedbil.jpg" class="item-thumbnail">
                       </div>
                       <div class="caption">
-                        <h5>Text popup</h5>
-                        <p>This feature contains generic image and text content when you open popup.</p>
+                        <h5>Hitta hit med bil</h5>
                       </div><!-- .caption -->
                     </a><!-- .thumbnail -->
 
                     <div class="content-to-populate-in-modal" id="modal-content-7">
-                      <img data-img-src="assets/images/other_images/top-image2.jpg" class="lazy full-width" alt="Lorem Ipsum">
-                      <h1>Sed scelerisque</h1>
-                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio</a>, sit amet. </p>
-                      <p>Laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio, sit amet.</p>
-                      <p>Suspendisse molestie lorem odio, sit amet. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio test.</p>
+											<h1>Hitta hit med bil</h1>
+											<a href="https://www.google.com/maps/preview?ll=57.815133,12.390724&z=15&t=h&hl=en-US&gl=SE&mapclient=embed&q=Otto+Salomons+v%C3%A4g+8+448+92+Floda">
+												<img src="http://maps.googleapis.com/maps/api/staticmap?center=Otto%20Salomons%20v%C3%A4g%208,Floda&zoom=13&size=600x450&maptype=roadmap&markers=color:red%7Clabel:C%7C57.815133,12.390724">
+											</a>
+											<p>Nääs ligger i Floda, 30 km öster om Göteborg. Välj avfarten Nääs/Öijared vid Nääsmotet. Från motet kör du i allén. När du kommer till en skylt som visar "Vänhem" åt vänster, följer du den. Be värdparet om en parkeringsbiljett.</p>
                     </div><!-- #modal-content-7 -->
                   </article>
-
-                  <!-- feature 3 -->
-                  <article class="feature-col col-md-4">
-                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-8', '', 'full-size');" class="thumbnail linked">
+	
+                  <article class="feature-col col-md-6">
+                    <a href="" onclick="populate_and_open_modal(event, 'modal-content-8');" class="thumbnail linked">
                       <div class="image-container">
-                        <img data-img-src="assets/images/other_images/project-4.jpg" class="lazy item-thumbnail" alt="Lorem Ipsum">
+                        <img src="img/hittamedtag.jpg" class="item-thumbnail">
                       </div>
                       <div class="caption">
-                        <h5>Alternate Gallery</h5>
-                        <p>Inside this feature's popup you'll find an alternative version of an image gallery.</p>
+                        <h5>Hitta hit med tåg &amp; buss</h5>
                       </div><!-- .caption -->
                     </a><!-- .thumbnail -->
 
                     <div class="content-to-populate-in-modal" id="modal-content-8">
-                      <h1>Sed scelerisque</h1>
-                      <p>Nullam ac rhoncus. Aliquam adipiscing eros non elit imperdiet congue. Etiam at ligula sit amet arcu laoreet consequat. Duis dictum lorem metus, vitae dapibus risus imperdiet nec. Suspendisse molestie lorem odio</a>, sit amet. Adipiscing eros non elit imperdiet congue tiam at ligula sit amet arcu.</p>
-
-                      <!-- alt image slider inside popup -->
-                      <div id="unique-id-for-alt-image-slider" class="owl-carousel popup-alt-image-gallery">
-                        <div class="item"><a href="assets/images/other_images/bg1.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-1.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg2.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-2.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg3.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-3.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg4.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-4.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg5.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-5.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg6.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-6.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg2.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-2.jpg"></a></div>
-                        <div class="item"><a href="assets/images/other_images/bg3.jpg" data-lightbox="popup-alt-gallery"><img class="lazyOwl" data-src="assets/images/other_images/gallery-thumb-3.jpg"></a></div>
-                      </div>
-                    </div><!-- #modal-content-8 -->
+											<h1>Tåg &amp; buss</h1>
+											<a href="https://www.google.com/maps/preview?ll=57.815133,12.390724&z=15&t=h&hl=en-US&gl=SE&mapclient=embed&q=Otto+Salomons+v%C3%A4g+8+448+92+Floda">
+												<img src="http://maps.googleapis.com/maps/api/staticmap?center=Otto%20Salomons%20v%C3%A4g%208,Floda&zoom=13&size=600x450&maptype=roadmap&markers=color:red%7Clabel:C%7C57.815133,12.390724">
+											</a>
+											<p>Ta pendeltåget till Floda station, därefter buss till busshållplatsen Lilla Nääs. Promenera genom slottsallén. När du kommer till en skylt som visar "Vänhem" åt vänster, följer du den.</p> 
+											<p>Det går även att gå från Floda till Nääs, en promenad på ca 25 min. Skyltning finns från Floda station till Nääs genom ekskogsreservatet.</p> 
+                    </div><!-- #modal-content-7 -->
                   </article>
-
-                </section><!-- end: .feature-columns -->
+ 									
+								</section><!-- end: .feature-columns -->
 
               <!-- End: Section content to edit -->
 
@@ -284,17 +243,18 @@
 
         <article id="osa" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg4.jpg">
           <div class="content-wrapper clearfix">
-            
-              <h1 class="section-title">Osa</h1>
-              
-                <!-- CONTACT DETAILS -->
+						<h1 class="section-title">OSA</h1>
+
+						<!-- CONTACT DETAILS -->
                 <div class="contact-details col-sm-5 col-md-3">
                 </div>
                 <!-- END: CONTACT DETAILS -->
 
                 <!-- CONTACT FORM -->
                 <div class="col-sm-7 col-md-9">
-                  <!-- IMPORTANT: change the email address at the top of the assets/php/mail.php file to the email address that you want this form to send to -->
+									<!-- IMPORTANT: change the email address at the top of the assets/php/mail.php file to the email address that you want this form to send to -->
+										
+
                   <form class="form-style validate-form clearfix" action="assets/php/mail.php" method="POST" role="form">
 
                     <!-- form left col -->
@@ -313,8 +273,11 @@
                     <!-- form right col -->
                     <div class="col-md-6">
                       <div class="form-group">
-                        <textarea placeholder="Vilka kommer? Några allergier?" class="form-control validate-field required" name="message"></textarea>
-                      </div> 
+                        <textarea placeholder="Kommer du/ni? Några allergier eller specialkost?" class="form-control validate-field required" name="message"></textarea>
+											</div>
+											<div class="text-content">
+												<p style="font-style: italic !important; font-size: 0.8em;">Barn, husdjur och första dejter undanbedes vänligen men bestämt. Om vi har missat att bjuda din käresta, hör av dig!</p>
+											</div>
                       <div class="form-group">
                         <img src="assets/images/theme_images/loader-form.GIF" class="form-loader">
                         <button type="submit" class="btn btn-sm btn-outline-inverse">Skicka</button>
