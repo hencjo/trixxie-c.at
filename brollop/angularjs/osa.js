@@ -1,15 +1,12 @@
-function OsaController($scope, $resource, $window, $timeout, $window) {
-	//	var RegistrationResource = $resource("https://backoffice.brewingagile.org/api/registration/1/", {});
-	var RegistrationResource = $resource("http://localhost\\:9080/ba-backoffice/api/registration/1/", {});
+function OsaController($scope, $resource) {
+	var RegistrationResource = $resource("http://trixxie-c.at/osa/1/", {});
+	//var RegistrationResource = $resource("http://localhost\\:9081/app/api/osa/1/", {});
 
 	$scope.r = {
 		ras: []
 	};
-
-
-	$scope.lastRegisteredName = "";
-	$scope.showSuccess = false;
-	$scope.showError = false;
+	$scope.success = null;
+	$scope.error = null;
 
     $scope.remove = function(m) {
         $scope.r.ras = _.without($scope.r.ras, m);
@@ -24,21 +21,16 @@ function OsaController($scope, $resource, $window, $timeout, $window) {
 			return ra.kommer == 'ja';
 		});
 	};
-
-
+	
 	$scope.add();
 
 	$scope.submit = function() {
-		$scope.showSuccess = false;
-		$scope.showError = false;
+		$scope.success = null;
+		$scope.error = null;
 		RegistrationResource.save($scope.r, function(p) {
-			if (p.success) $scope.lastRegisteredName = $scope.r.participantName;
-			$scope.showSuccess = p.success;
-			$scope.showError = !p.success;
-			$window.location.href = "#signUpForm";
+			$scope.success = "Din OSA är mottagen. Tack!";
 		}, function(response) { 
-			$scope.showError = true;
-			$window.location.href = "#signUpForm";
+			$scope.error = "Något har gått fel. Snälla kontakta Henrik om detta :)";
 		});
 	};
 }

@@ -1205,24 +1205,9 @@ h6 {
     height:125px;
 }
 
-#main-content .form-style .alert {
-    display: none;
-    background:#fff;
-    color:#a10000;
-    font-size: 0.7em;
-    font-family: 'open_sansbold', sans-serif;
-    border-radius: 0;
-    padding:8px 10px;
-}
-#main-content .form-style .alert.success {
-    color:#119400;
-}
 
 #main-content .form-style .form-general-error-container {
     display:none;
-}
-#main-content .form-style .form-general-error-container .alert {
-    display:block;
 }
 
 #main-content .form-style .form-loader {
