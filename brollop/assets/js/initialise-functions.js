@@ -32,7 +32,7 @@ function initialise_document_ready_functions()
     });
 
     // initialise form validation and submit functions 
-    validate_and_submit_forms();
+	//validate_and_submit_forms();
 
     // ------ On Opening Popups ------
     $('#common-modal').on('shown.bs.modal', function()

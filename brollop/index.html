@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:ng="http://angularjs.org" ng-app="app" id="ng-app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,7 +40,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body ng-controller="OsaController">
 
     <div class="background-image-overlay"></div>
 
@@ -240,8 +240,8 @@
             </div><!-- .col-sm-10 -->
           </div><!-- .content-wrapper -->
         </article><!-- .section-wrapper -->
-
-        <article id="osa" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images/bg4.jpg">
+				
+				<article id="osa" class="section-wrapper clearfix" data-custom-background-img="img/naas.jpg">
           <div class="content-wrapper clearfix">
 						<h1 class="section-title">OSA</h1>
 
@@ -251,39 +251,71 @@
                 <!-- END: CONTACT DETAILS -->
 
                 <!-- CONTACT FORM -->
-                <div class="col-sm-7 col-md-9">
+								<div class="col-sm-7 col-md-9">
 									<!-- IMPORTANT: change the email address at the top of the assets/php/mail.php file to the email address that you want this form to send to -->
-										
 
-                  <form class="form-style validate-form clearfix" action="assets/php/mail.php" method="POST" role="form">
+									<form class="form-style validate-form clearfix" ng-submit="submit()">
+										<!-- form left col -->
+										<div ng-repeat="ra in r.ras">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label for="nameInput" class="pull-left">Inbjuden gäst {{$index + 1}}</label>
+													<input type="text" class="text-field form-control validate-field required" data-validation-type="string" id="form-name" placeholder="Namn och efternamn" name="nameInput" ng-model="ra.namn" required>
+												</div>  
+												<div class="form-group">
+													<label class="pull-left">Kommer</label>
+													<label class="radio-inline">
+														<input type="radio" value="ja" ng-model="ra.kommer"> Ja
+													</label>
+													<label class="radio-inline">
+														<input type="radio" value="nej" ng-model="ra.kommer"> Nej
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6" ng-show="ra.kommer == 'ja'">
+												<div class="form-group">
+													<label for="dietInput" class="pull-left">Allergier eller specialkost?</label>
+													<input type="text" class="text-field form-control validate-field phone" placeholder="Inga" name="dietInput" ng-model="ra.kost" ng-disabled="ra.kommer != 'ja'">
+												</div>
+												<div class="form-group">
+													<div class="checkbox">
+														<label class="pull-left"><input type="checkbox" ng-model="ra.alkoholfri" ng-disabled="ra.kommer != 'ja'"> Alkoholfritt alternativ önskas</label>
+													</div>
+												</div>
+											</div>
+											<div class="clearfix"></div>
+											<hr style="border-top: 1px dashed white; margin-top: 0;">
 
-                    <!-- form left col -->
-                    <div class="col-md-6">
+										</div>
+										<div class="clearfix"></div>
+										<div class="col-md-6" ng-show="anyRegistration()">
+  											<div class="form-group">
+												<label for="emailInput" class="pull-left">Email</label>
+												<input type="email" class="text-field form-control validate-field required" placeholder="Emailadress" name="email" ng-model="r.email" ng-required="anyRegistration()">
+											</div>
+										</div>
+										<div class="col-md-6" ng-show="anyRegistration()">
                       <div class="form-group">
-                        <input type="text" class="text-field form-control validate-field required" data-validation-type="string" id="form-name" placeholder="Namn" name="name">
-                      </div>  
-                      <div class="form-group">
-                        <input type="email" class="text-field form-control validate-field required" data-validation-type="email" id="form-email" placeholder="Emailadress" name="email">
-                      </div>
-                      <div class="form-group">
-                        <input type="tel" class="text-field form-control validate-field phone" data-validation-type="phone" id="form-contact-number" placeholder="Telefonnummer" name="contact_number">
+												<label for="phoneInput" class="pull-left">Telefon</label>
+                        <input type="tel" class="text-field form-control validate-field phone" placeholder="Telefonnummer" name="phoneInput" ng-required="anyRegistration()">
                       </div>    
-                    </div><!-- end: form left col -->
-
-                    <!-- form right col -->
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <textarea placeholder="Kommer du/ni? Några allergier eller specialkost?" class="form-control validate-field required" name="message"></textarea>
+										</div>
+										<div class="col-md-6" ng-show="anyRegistration()">
+											<div class="form-group">
+												<div class="checkbox">
+													<label class="pull-left"><input type="checkbox" ng-model="r.parkeringsbiljett"> Parkeringsbiljett önskas</label>
+												</div>
 											</div>
-											<div class="text-content">
-												<p style="font-style: italic !important; font-size: 0.8em;">Barn, husdjur och första dejter undanbedes vänligen men bestämt. Om vi har missat att bjuda din käresta, hör av dig!</p>
-											</div>
-                      <div class="form-group">
-                        <img src="assets/images/theme_images/loader-form.GIF" class="form-loader">
-                        <button type="submit" class="btn btn-sm btn-outline-inverse">Skicka</button>
-                      </div> 
-                      <div class="form-group form-general-error-container"></div>           
-                    </div><!-- end: form right col -->
+										</div>
+										<div class="clearfix"></div>
+										<div class="col-md-6 col-md-offset-6">
+											<div class="form-group">
+												<img src="assets/images/theme_images/loader-form.GIF" class="form-loader">
+												<button ng-click="add()" class="btn btn-sm btn-outline-inverse">Lägg till gäst</button>
+												<button type="submit" class="btn btn-sm btn-outline-inverse">Skicka</button>
+											</div> 
+											<div class="form-group form-general-error-container"></div>           
+										</div>
 
                   </form>
                 </div><!-- end: CONTACT FORM -->
@@ -352,6 +384,12 @@
     <!-- Custom functions for this theme -->
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/initialise-functions.js"></script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+		<script src="angularjs/app.js?version=1"></script>
+		<script src="angularjs/osa.js?version=1"></script>
 
     <!-- IE9 form fields placeholder fix -->
     <!--[if lt IE 9]>
